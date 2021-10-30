@@ -176,9 +176,12 @@ const target = document.querySelector('title');
 
 // create an observer instance
 const observer = new MutationObserver(function(mutations) {
+	const iframe = document.querySelector('#ptifrmtgtframe').contentWindow.document.body;
+	const termSelect = iframe.querySelector('.PSLEVEL1GRIDLABEL.PSLEFTCORNER');
+	
     // We need only first event and only new value of the title
     console.log(mutations[0].target.nodeValue);
-	if (document.querySelector('title').textContent === 'My Class Schedule') {
+	if (document.querySelector('title').textContent === 'My Class Schedule' && !termSelect) {
 		main();
 		observer.disconnect();
 	}
