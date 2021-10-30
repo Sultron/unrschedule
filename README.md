@@ -1,2 +1,2 @@
 # unrschedule
-Export your UNR schedule to use with external calendaring software.
+Export your UNR schedule to use with any external calendaring software.
